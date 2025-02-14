@@ -1,101 +1,79 @@
-import Image from "next/image";
+import Card1 from '../components/Home/Card1';
+import Heading from '../components/Home/Heading';
+import Card2 from '../components/Home/Card2';
+// import home from '@/public/carousel-1.jpg';
+
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+  return (
+  <>
+    <div className=" flex flex-col items-center justify-center gap-y-10 bg-cover bg-center h-screen" style={{
+      backgroundImage:`url('/home/carousel-1.jpg')`,
+      backgroundSize:'100% 100%',
+      }}>
+      <h3 className="text-white">BEST ONLINE COURSES</h3>
+     
+      <div className="child">
+        <h2 className="text-2xl sm:text-3xl md:text-6xl my-1 font-bold text-white">Best Online Learning</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-6xl my-4 font-bold text-white"> From Home </h2>
+      </div>
+      <button className="text-white bg-orange-400 hover:bg-orange-600 font-bold px-5 py-4 rounded-xl ">Learn More</button>
     </div>
+
+    <div className="flex justify-center flex-col md:flex-row px-20 h-screen items-center gap-y-6 gap-x-6 mb-16 md:mb-1">
+
+      <div className = 'flex-1 h-1/2 ' style={{
+        backgroundImage:'url(/home/about.jpg)',
+        backgroundSize:'80% 100%',
+        backgroundRepeat:'no-repeat',
+        backgroundPosition:'right',}}>
+
+      </div>
+
+      <div className="text-sm sm:text-xl flex-1 flex flex-col  gap-y-4">
+        <h3 className="text-orange-600 font-semibold text-xl">ABOUT US</h3>
+        <h3 className = 'font-bold text-xl md:text-2xl' style={{color:'#44425A'}}> Innovative Way To Learn</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, aut, dolore ducimus iusto voluptatum architecto non aspernatur dolor pariatur commodi nesciunt quia suscipit laboriosam temporibus totam, necessitatibus deserunt omnis. Earum.</p>
+        <button className="text-white bg-orange-400 hover:bg-orange-600 font-bold  py-3 rounded-xl w-44">Learn More</button>
+      </div>
+    
+    </div>
+
+    {/* third section start from here  */}
+
+ 
+
+    <Heading first = {'SUBJECTS'} second = {'EXPLORE TOP SUBJECTS'}/>
+
+    <div className="py-20  w-full flex gap-x-10 gap-y-10 justify-evenly items-center flex-wrap mb-16">
+
+      <Card1 pic = {'/home/cat-1.jpg'} courseTitle={'Web Design'}  courseAmount={'100 Courses'}/>
+      <Card1 pic = {'/home/cat-2.jpg'} courseTitle={'Development'}  courseAmount={'100 Courses'}/>
+      <Card1 pic = {'/home/cat-3.jpg'} courseTitle={'Game Design'}  courseAmount={'100 Courses'}/>
+      <Card1 pic = {'/home/cat-4.jpg'} courseTitle={'Apps Design'}  courseAmount={'100 Courses'}/>
+
+      <Card1 pic = {'/home/cat-5.jpg'} courseTitle={'Marketing'}  courseAmount={'100 Courses'}/>
+      <Card1 pic = {'/home/cat-6.jpg'} courseTitle={'Research'}  courseAmount={'100 Courses'}/>
+      <Card1 pic = {'/home/cat-7.jpg'} courseTitle={'Content Writing'}  courseAmount={'100 Courses'}/>
+      <Card1 pic = {'/home/cat-8.jpg'} courseTitle={'SEO'}  courseAmount={'100 Courses'}/>
+    </div>
+
+
+    {/* fourth section start from here  */}
+
+    <Heading first ={'Courses'} second = {'Our Popular Courses'} />
+
+    <div className='py-20 w-full flex gap-x-10 gap-y-10 justify-evenly items-center flex-wrap mb-16'>
+     <Card2 pic = {'/home/course-1.jpg'}/>
+     <Card2 pic = {'/home/course-2.jpg'}/>
+     <Card2 pic = {'/home/course-3.jpg'}/>
+     <Card2 pic = {'/home/course-4.jpg'}/>
+     <Card2 pic = {'/home/course-5.jpg'}/>
+     <Card2 pic = {'/home/course-6.jpg'}/>
+    </div>
+
+
+  </>
   );
 }

@@ -15,7 +15,7 @@ import { MdKeyboardArrowRight } from "react-icons/md"
 function Footer() {
  const [email , setEmail] =  useState('')
   return (
-    <div className='w-full flex justify-between px-10'
+    <div className='w-full flex justify-between flex-col sm:flex-row px-10 flex-wrap'
     style={{
         backgroundColor: '#44425A',
     }}>
@@ -50,7 +50,7 @@ function Footer() {
 
         <div className='flex flex-col text-white my-16 gap-y-12 flex-1 px-10 '>
 
-          <h2 className='text-orange-600 text-2xl tracking-extra font-semibold'> Our Courses </h2>
+          <h2 className='text-orange-600 text-2xl tracking-extra font-semibold text-center'> Our Courses </h2>
 
           <div>
             <p className='flex items-center cursor-pointer hover:underline'><span className='pe-3'><MdKeyboardArrowRight /></span>Web Design</p>
@@ -68,19 +68,24 @@ function Footer() {
 
           <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed ea duo ipsum. Dolor duo eirmod sea justo no lorem est diam</p>
 
-          <div className='border rounded-lg overflow-hidden focus-within:border-orange-600'>
+          <form className='border rounded-lg flex items-center overflow-hidden focus-within:border-orange-600'>
             <input type="email" 
             placeholder='Your Email Address'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className='w-[80%] outline-none py-4 ps-10 text-black caret-orange-600 '
-            autofocus
+            className='w-[70%] outline-none py-5 ps-10 text-sm text-black caret-orange-600'
+            // autoFocus
             />
             <button 
-            className=' w-[20%] bg-orange-500 active:bg-orange-600 text-white font-semibold py-4'>
+            onClick={(e) => {
+              e.preventDefault()
+            }}
+            type = 'submit'
+            className='w-[30%] text-sm md:text-lg  bg-orange-500 active:bg-orange-600 text-white font-semibold whitespace-nowrap py-4 '>
                 Sign Up
             </button>
-          </div>
+          </form>
+
         </div>
       
     </div>

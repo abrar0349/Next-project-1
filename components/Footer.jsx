@@ -5,6 +5,8 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { PiPhoneFill } from "react-icons/pi";
 import { IoIosMail } from "react-icons/io";
 
+import SocialIcon from './Home/SocialIcon';
+
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -31,19 +33,15 @@ function Footer() {
 
           <div className='flex justify-between pe-5'>
 
-            <div className='border border-white rounded-lg p-2 hover:bg-white hover:text-black cursor-pointer'>
-              <FaTwitter />
-            </div>
-            <div className='border border-white rounded-lg p-2 hover:bg-white hover:text-black cursor-pointer'>
-              <FaFacebookF />
-            </div>
-            <div className='border border-white rounded-lg p-2 hover:bg-white hover:text-black cursor-pointer'>
-              <FaLinkedinIn />
-            </div>
-            <div className='border border-white rounded-lg p-2 hover:bg-white hover:text-black cursor-pointer'>
-              <FaInstagram />
-            </div>
+            
+            <SocialIcon icon = {<FaTwitter />}/>
+           
+            <SocialIcon icon = {<FaFacebookF />}/>
+            
+            <SocialIcon icon = {<FaLinkedinIn />}/>
           
+            <SocialIcon icon = {<FaInstagram />}/>
+            
           </div>
 
         </div>
@@ -68,7 +66,7 @@ function Footer() {
 
           <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed ea duo ipsum. Dolor duo eirmod sea justo no lorem est diam</p>
 
-          <form className='border rounded-lg flex items-center overflow-hidden focus-within:border-orange-600'>
+          <form className='border border-transparent sm:border-white rounded-lg flex items-center overflow-hidden focus-within:border-orange-600'>
             <input type="email" 
             placeholder='Your Email Address'
             value={email}
@@ -81,7 +79,7 @@ function Footer() {
               e.preventDefault()
             }}
             type = 'submit'
-            className='w-[30%] text-sm md:text-lg  bg-orange-500 active:bg-orange-600 text-white font-semibold whitespace-nowrap py-4 '>
+            className='w-[30%] text-sm md:text-lg  bg-orange-500 active:bg-orange-600 text-white font-semibold whitespace-nowrap py-5 md:py-4 '>
                 Sign Up
             </button>
           </form>

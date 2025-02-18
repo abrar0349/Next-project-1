@@ -1,9 +1,15 @@
-import Card1 from '../components/Home/Card1';
+// import Card1 from '../components/Home/Card1';
 import Heading from '../components/Home/Heading';
-import Card2 from '../components/Home/Card2';
+// import Card2 from '../components/Home/Card2';
 import HeroSec from '../components/Home/HeroSec';
-import Form from '../components/Home/Form'
-// import home from '@/public/carousel-1.jpg';
+import Form from '../components/Global/Form'
+// import Card3 from '../components/Home/Card3'
+import Slider from '../components/Home/Slider'
+import CircleDiv from '../components/Home/CircleDiv'
+import About from '@/components/Global/About1';
+import Course1 from '@/components/Global/Course1';
+import Course2 from '@/components/Global/Course2'
+
 
 
 export default function Home() {
@@ -11,63 +17,40 @@ export default function Home() {
   return (
   <>
    
-   <HeroSec />
+    <HeroSec />
 
-    <div className="flex justify-center flex-col md:flex-row px-20 h-screen items-center gap-y-6 gap-x-6 mb-16 md:mb-1">
+    <About />
 
-      <div className = 'w-screen md:w-auto flex-1 h-1/2  mt-4 md:mt-0' style={{
-        backgroundImage:'url(/home/about.jpg)',
-        backgroundSize:'80% 100%',
-        backgroundRepeat:'no-repeat',
-        backgroundPosition:'center',}}>
-
-      </div>
-
-      <div className=" w-screen sm:w-auto px-4 sm:px-0 flex-1 text-sm sm:text-xl flex flex-col  gap-y-4 ">
-
-        <h3 className="text-orange-600 font-semibold text-xl">ABOUT US</h3>
-        <h3 className = 'font-bold text-xl md:text-2xl' style={{color:'#44425A'}}> Innovative Way To Learn</h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, aut, dolore ducimus iusto voluptatum architecto non aspernatur dolor pariatur commodi nesciunt quia suscipit laboriosam temporibus totam, necessitatibus deserunt omnis. Earum.</p>
-        <button className="text-white bg-orange-400 hover:bg-orange-600 font-bold  py-3 rounded-xl w-44">Learn More</button>
-
-      </div>
+    <Course1 />
     
-    </div>
-
-    {/* third section start from here  */}
-
- 
-
-    <Heading first = {'SUBJECTS'} second = {'EXPLORE TOP SUBJECTS'}/>
-
-    <div className="py-20  w-full flex gap-x-10 gap-y-10 justify-evenly items-center flex-wrap mb-16">
-
-      <Card1 pic = {'/home/cat-1.jpg'} courseTitle={'Web Design'}  courseAmount={'100 Courses'}/>
-      <Card1 pic = {'/home/cat-2.jpg'} courseTitle={'Development'}  courseAmount={'100 Courses'}/>
-      <Card1 pic = {'/home/cat-3.jpg'} courseTitle={'Game Design'}  courseAmount={'100 Courses'}/>
-      <Card1 pic = {'/home/cat-4.jpg'} courseTitle={'Apps Design'}  courseAmount={'100 Courses'}/>
-
-      <Card1 pic = {'/home/cat-5.jpg'} courseTitle={'Marketing'}  courseAmount={'100 Courses'}/>
-      <Card1 pic = {'/home/cat-6.jpg'} courseTitle={'Research'}  courseAmount={'100 Courses'}/>
-      <Card1 pic = {'/home/cat-7.jpg'} courseTitle={'Content Writing'}  courseAmount={'100 Courses'}/>
-      <Card1 pic = {'/home/cat-8.jpg'} courseTitle={'SEO'}  courseAmount={'100 Courses'}/>
-    </div>
-
-
-    {/* fourth section start from here  */}
-
-    <Heading first ={'Courses'} second = {'Our Popular Courses'} />
-
-    <div className='py-20 w-full flex gap-x-10 gap-y-10 justify-evenly items-center flex-wrap mb-16'>
-     <Card2 pic = {'/home/course-1.jpg'}/>
-     <Card2 pic = {'/home/course-2.jpg'}/>
-     <Card2 pic = {'/home/course-3.jpg'}/>
-     <Card2 pic = {'/home/course-4.jpg'}/>
-     <Card2 pic = {'/home/course-5.jpg'}/>
-     <Card2 pic = {'/home/course-6.jpg'}/>
-    </div>
+    <Course2 />
 
     <Form />
+
+  {/* Sixth section start from here  */}
+ 
+    {/* Seventh section start from here  */}
+    <Heading first ={'Testimonial'} second = {'What Say Our Students'} />
+
+    <div className='w-full h-screen pt-42 flex flex-col justify-center items-center border border-red-600'>
+        <div className='border border-red-600 w-1/2 h-[65%] flex  overflow-hidden flex-nowrap gap-x-36 transition-all'>
+          <Slider 
+          about = {'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, omnis eum labore dicta, iste nihil aut reprehenderit aliquid animi exercitationem eveniet nulla quo officiis incidunt enim impedit, aspernatur illum dolor!'}
+          pic = {'/home/testimonial-1.jpg'}
+          />
+             <Slider 
+          about = {'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, omnis eum labore dicta, iste nihil aut reprehenderit aliquid animi exercitationem eveniet nulla quo officiis incidunt enim impedit, aspernatur illum dolor!'}
+          pic = {'/home/testimonial-2.jpg'}
+          />
+             <Slider 
+          about = {'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, omnis eum labore dicta, iste nihil aut reprehenderit aliquid animi exercitationem eveniet nulla quo officiis incidunt enim impedit, aspernatur illum dolor!'}
+          pic = {'/home/testimonial-3.jpg'}
+          />
+        </div>
+        <CircleDiv />
+    </div>
+
+ 
 
   </>
   );

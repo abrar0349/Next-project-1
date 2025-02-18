@@ -4,6 +4,9 @@ import React, { useEffect, useRef, useState } from 'react';
 
 function HeroSec() {
 
+  const [cond1 , setCond1] = useState(true)
+  const [cond2 , setCond2] = useState(false)
+
   const circle1 = useRef()
   const circle2 = useRef()
   const circle3 = useRef()
@@ -15,6 +18,7 @@ function HeroSec() {
     circle1.current.classList.add('bg-orange-600')
     circle2.current.classList.remove('bg-orange-600')
     circle3.current.classList.remove('bg-orange-600')
+    setCond1(true)
   
   }
 
@@ -24,6 +28,9 @@ function HeroSec() {
     circle1.current.classList.add('bg-gray-600')
     circle2.current.classList.add('bg-orange-600')
     circle3.current.classList.remove('bg-orange-600')
+
+    setCond1(false)
+    setCond2(true)
   }
 
   function changeSlide3(e){
@@ -32,13 +39,23 @@ function HeroSec() {
     circle1.current.classList.add('bg-gray-600')
     circle2.current.classList.remove('bg-orange-600')
     circle3.current.classList.add('bg-orange-600')
+
+    setCond1(false)
+    setCond2(false)
   }
 
 
   return (
 
-    <div className="flex" style={{
-        backgroundImage:`url('/home/carousel-1.jpg')`,
+    <div className="flex transition-all" 
+    style={{
+         backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.5)), ${
+      cond1
+        ? `url('/home/carousel-1.jpg')`
+        : cond2
+        ? `url('/home/carousel-2.jpg')`
+        : `url('/home/carousel-3.jpg')`
+    }`,
         backgroundSize:'100% 100%',
     }}>
 
@@ -70,8 +87,8 @@ function HeroSec() {
         <h3 className="text-white">BEST ONLINE COURSES</h3>
         
         <div className="child">
-        <h2 className="text-2xl sm:text-3xl md:text-6xl my-1 font-bold text-white">Best Online Learning</h2>
-        <h2 className="text-2xl sm:text-3xl md:text-5xl my-1 sm:my-4 font-bold text-white"> From Home </h2>
+        <h2 className="text-2xl sm:text-3xl md:text-6xl my-1 font-bold text-white"> { cond1 ?  "Best Education From" : (cond2 ? "Best Online Learning"  : "New Way To Learn")  }</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-5xl my-1 sm:my-4 font-bold text-white"> { cond1 ? "Your Home" : (cond2 ? "Plateform" : "From Home")} </h2>
         </div>
         <button className="text-white bg-orange-400 hover:bg-orange-600 font-bold px-5 py-4 rounded-xl ">Learn More</button>
 

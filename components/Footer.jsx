@@ -16,8 +16,10 @@ import { MdKeyboardArrowRight } from "react-icons/md"
 
 function Footer() {
  const [email , setEmail] =  useState('')
+
   return (
-    <div className='w-full flex justify-between flex-col sm:flex-row px-10 flex-wrap'
+
+    <div className='w-full flex justify-between flex-col sm:flex-row px-10 flex-wrap mt-36'
     style={{
         backgroundColor: '#44425A',
     }}>

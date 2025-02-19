@@ -1,4 +1,5 @@
 import React from 'react';
+import Link  from "next/link";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 function Sliders({ pic , title }) {
@@ -12,7 +13,7 @@ function Sliders({ pic , title }) {
     }}
     >
         <h3 className='text-white font-bold text-6xl'>{title}</h3>
-        <div className='text-white font-bold text-lg flex items-center gap-x-4'> <li className='list-none cursor-pointer hover:underline'>Home</li> <span><MdKeyboardDoubleArrowRight /></span> <p>{title}</p></div>
+        <div className='text-white font-bold text-lg flex items-center gap-x-4'> <Link href = '/' className='list-none cursor-pointer hover:underline'>Home</Link> <span><MdKeyboardDoubleArrowRight /></span> <p>{title}</p></div>
 
 
     </div>

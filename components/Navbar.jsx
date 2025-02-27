@@ -7,6 +7,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import  Link  from "next/link";
 
 export default function Navbar() {
+  
   const [navOpen, setNavOpen] = useState(false);
 
   return (
@@ -34,21 +35,34 @@ export default function Navbar() {
         } md:flex fixed z-10 top-16 bottom-0 left-0 right-0 md:static bg-white`}
       >
         <ul className="flex flex-col md:flex-row items-center md:justify-between gap-x-5 gap-y-4">
-         <Link href = "/" className="underline text-orange-500   cursor-pointer underline-offset-4">Home</Link> 
-         <Link href = "/about" className="hover:underline hover:text-orange-500 p-2  cursor-pointer underline-offset-4 transition-all">
-            About
+         <Link href = "/" 
+            onClick={() => setNavOpen(!navOpen)}
+            className="underline text-orange-500   cursor-pointer underline-offset-4">
+              Home</Link> 
+         <Link href = "/about"
+            onClick={() => setNavOpen(!navOpen)}
+            className="hover:underline hover:text-orange-500 p-2  cursor-pointer underline-offset-4 transition-all">
+             About
           </Link> 
-         <Link href = "/course" className="hover:underline hover:text-orange-500 p-2  cursor-pointer underline-offset-4 transition-all">
-            Courses
+         <Link href = "/course"
+            onClick={() => setNavOpen(!navOpen)}
+            className="hover:underline hover:text-orange-500 p-2  cursor-pointer underline-offset-4 transition-all">
+              Courses
           </Link> 
-         <Link href = "/teacher" className="hover:underline hover:text-orange-500 p-2  cursor-pointer underline-offset-4 transition-all">
-            Teachers
+         <Link href = "/teacher" 
+            onClick={() => setNavOpen(!navOpen)}
+            className="hover:underline hover:text-orange-500 p-2  cursor-pointer underline-offset-4 transition-all">
+             Teachers
           </Link> 
-         <Link href = "/blog" className="flex hover:underline hover:text-orange-500 p-2  cursor-pointer underline-offset-4 transition-all">
-            Blog <IoMdArrowDropdown />
+         <Link href = "/blog"
+            onClick={() => setNavOpen(!navOpen)}
+            className="flex hover:underline hover:text-orange-500 p-2  cursor-pointer underline-offset-4 transition-all">
+             Blog <IoMdArrowDropdown />
           </Link> 
-         <Link href = "/contact" className="hover:underline hover:text-orange-500 p-2  cursor-pointer underline-offset-4 transition-all">
-            Contact
+         <Link href = "/contact"
+            onClick={() => setNavOpen(!navOpen)}
+            className="hover:underline hover:text-orange-500 p-2  cursor-pointer underline-offset-4 transition-all">
+             Contact
           </Link> 
         </ul>
         <button className="bg-orange-500 hover:bg-orange-600 text-white p-2 cursor-pointer">

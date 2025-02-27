@@ -8,7 +8,8 @@ import Slider from '../components/Home/Slider'
 import CircleDiv from '../components/Home/CircleDiv'
 import About from '@/components/Global/About1';
 import Course1 from '@/components/Global/Course1';
-import Course2 from '@/components/Global/Course2'
+import Course2 from '@/components/Global/Course2';
+import Teacher1 from '@/components/Global/Teachers1';
 
 
 
@@ -27,8 +28,8 @@ export default function Home() {
 
     <Form />
 
-  {/* Sixth section start from here  */}
- 
+    <Teacher1 arr = {['team-1.jpg','team-2.jpg','team-3.jpg','team-4.jpg']} />
+   
     {/* Seventh section start from here  */}
     <Heading first ={'Testimonial'} second = {'What Say Our Students'} />
 

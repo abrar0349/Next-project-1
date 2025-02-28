@@ -13,7 +13,10 @@ function Sliders({ pic , title }) {
     }}
     >
         <h3 className='text-white font-bold text-xl sm:text-3xl md:text-6xl'>{title}</h3>
-        <div className='text-white font-bold text-sm md:text-lg flex items-center gap-x-2 md:gap-x-4'> <Link href = '/' className='list-none cursor-pointer hover:underline'>Home</Link> <span><MdKeyboardDoubleArrowRight /></span> <p>{title}</p></div>
+        <div className='text-white font-bold text-sm md:text-lg flex items-center gap-x-2 md:gap-x-4'> 
+          <Link href = '/' className='list-none cursor-pointer hover:underline'>Home</Link>
+          <span><MdKeyboardDoubleArrowRight /></span> <p>{title}</p>
+          </div>
 
 
     </div>

@@ -49,7 +49,7 @@ function CircleDiv({ setMove }) {
 
       <div className=' w-full h-[10%] flex  justify-center items-center gap-x-2'>
 
-          <div className=' w-[30px]  h-[30px]  rounded-full cursor-ponter  bg-orange-600'
+          <div className=' w-[30px] h-[30px] rounded-full cursor-pointer bg-orange-600'
             ref={circle1}
             onClick={(e) => changeSlide1(e)}
           >
@@ -61,7 +61,7 @@ function CircleDiv({ setMove }) {
           >
           </div>
 
-          <div className=' w-[30px] h-[30px] rounded-full  cursor-ponter  bg-gray-600'
+          <div className=' w-[30px] h-[30px] rounded-full  cursor-pointer  bg-gray-600'
             ref={circle3}
             onClick={(e) => changeSlide3(e)}
           >

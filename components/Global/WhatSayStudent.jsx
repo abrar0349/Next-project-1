@@ -12,10 +12,10 @@ function WhatSayStudent() {
     <>
         <Heading first ={'Testimonial'} second = {'What Say Our Students'} />
 
-        <div className='w-full h-screen  flex flex-col justify-center items-center border border-red-600'>
+        <div className='w-full h-screen flex flex-col justify-center items-center'>
 
         <div 
-            className=' w-[90%] sm:w-1/2 h-[50%] sm:h-[65%] flex flex-nowrap overflow-hidden'>
+            className=' w-[90%] md:w-1/2 h-[50%] sm:h-[65%] flex flex-nowrap overflow-hidden'>
             <Slider 
              movement={move}
              about = {'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, omnis eum labore dicta, iste nihil aut reprehenderit aliquid animi exercitationem eveniet nulla quo officiis incidunt enim impedit, aspernatur illum dolor!'}

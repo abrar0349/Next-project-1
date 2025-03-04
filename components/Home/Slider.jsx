@@ -14,8 +14,6 @@ function Slider({ about , pic , movement}) {
               // right : '100%',
               // right : "200%"
               right : `${movement}%`
-              // marginLeft : '122.5%',
-              
           }}
       >
         

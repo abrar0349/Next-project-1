@@ -9,7 +9,7 @@ function Teachers1(
     <>
         <Heading first ={'Teachers'} second = {'Meet Our Teachers'} />
 
-        <div className="py-16  w-full flex gap-x-8 justify-cente items-center gap-y-16 flex-wrap mb-16 z-10">
+        <div className="py-16  w-full flex gap-x-8 justify-center items-center gap-y-16 flex-wrap mb-16 z-10">
 
           {arr.map(
             (pic) => {

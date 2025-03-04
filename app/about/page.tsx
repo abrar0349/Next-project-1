@@ -1,6 +1,7 @@
 import React from 'react';
 import Sliders from '@/components/Global/Sliders';
 import About from '@/components/Global/About1';
+import WhatSayStudent from '@/components/Global/WhatSayStudent'
 import Form from '@/components/Global/Form';
 
 function page(  ) {
@@ -13,6 +14,9 @@ function page(  ) {
       <Sliders pic={'/Global/course-3.jpg'} title={'About'}/>
 
       <About />
+
+      <WhatSayStudent />
+
 
       <Form />
      

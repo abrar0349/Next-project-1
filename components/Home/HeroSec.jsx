@@ -19,8 +19,15 @@ function HeroSec() {
     circle2.current.classList.remove('bg-orange-600')
     circle3.current.classList.remove('bg-orange-600')
     setCond1(true)
+    setTimeout(() => {
+      changeSlide2()
+    },60000)
   
   }
+
+  useEffect(() => {
+      changeSlide1()
+  } , [])
 
   function changeSlide2(e){
 
@@ -31,6 +38,10 @@ function HeroSec() {
 
     setCond1(false)
     setCond2(true)
+
+    setTimeout(() => {
+      changeSlide3()
+    },60000)
   }
 
   function changeSlide3(e){
@@ -42,6 +53,10 @@ function HeroSec() {
 
     setCond1(false)
     setCond2(false)
+
+    setTimeout(() => {
+      changeSlide1()
+    },60000)
   }
 
 

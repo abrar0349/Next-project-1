@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 function CircleDiv({ setMove }) {
 
@@ -10,6 +10,10 @@ function CircleDiv({ setMove }) {
     const circle2 = useRef()
     const circle3 = useRef()
 
+    useEffect( () => {
+      changeSlide1()
+    },[])
+
   function changeSlide1(e){
 
     circle1.current.classList.add('bg-orange-600')
@@ -17,6 +21,10 @@ function CircleDiv({ setMove }) {
     circle3.current.classList.remove('bg-orange-600')
     setMove(0)
     setCond1(true)
+
+    setTimeout( () => {
+      changeSlide2()
+    },60000)
   
   }
 
@@ -30,6 +38,10 @@ function CircleDiv({ setMove }) {
     setMove(100)
     setCond1(false)
     setCond2(true)
+
+    setTimeout( () => {
+      changeSlide3()
+    },60000)
   }
 
   function changeSlide3(e){
@@ -42,6 +54,10 @@ function CircleDiv({ setMove }) {
     setMove(200)
     setCond1(false)
     setCond2(false)
+
+    setTimeout( () => {
+      changeSlide1()
+    },60000)
   }
 
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import Sliders from '@/components/Global/Sliders';
-
+import Heading from '@/components/Home/Heading';
+import ContactForm from '@/components/Global/ContactForm'
 
 function page() {
   return (
@@ -11,6 +12,10 @@ function page() {
 
       <Sliders pic={'/Global/course-3.jpg'} title={'Contact'}/>
       
+      <Heading first ={'CONTACT'} second = {'Contact For Any Query'} />
+
+      <ContactForm />
+
       
     </div>
   )

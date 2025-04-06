@@ -21,7 +21,7 @@ function ContactForm() {
   }
   return (
     <div 
-      className='bg-gray-200 w-[100%] sm:w-[90%] md:w-[60%] flex flex-col gap-8 sm:gap-12 items-center m-auto py-10 sm:px-10 mt-10'>
+      className='bg-gray-200 w-[100%] sm:w-[90%] md:w-[60%] flex flex-col gap-8 sm:gap-12 items-center m-auto py-10 sm:px-10 mt-10 border roundeed-lg'>
       <input 
         type="text"
         placeholder='Your Name'

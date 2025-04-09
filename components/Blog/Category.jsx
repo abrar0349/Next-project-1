@@ -3,7 +3,7 @@ import React from 'react'
 function Category({text , count}) {
   return (
     <div
-     className='border border-transparent border-b-gray-400 flex justify-between pb-1 mb-4'>
+     className='border border-transparent border-b-gray-400 flex  justify-between pb-1 mb-4'>
       <p 
        className='text-gray-600 cursor-pointer hover:text-orange-900 font-bold'>{text}
       </p>
